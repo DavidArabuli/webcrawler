@@ -1,0 +1,23 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "web crawler",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morsvincit/webcrawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morsvincit/webcrawler/issues"
+  },
+  "homepage": "https://github.com/morsvincit/webcrawler#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
