@@ -1,16 +1,17 @@
 function printReport(pages) {
-  console.log("================");
-  console.log("REPORT");
-  console.log("================");
+  let report = "================\n";
+  report += "REPORT\n";
+  report += "================\n";
   const sortedPages = sortPages(pages);
   for (const sortedPage of sortedPages) {
     const url = sortedPage[0];
     const hits = sortedPage[1];
-    console.log(`Found ${hits} links to page: ${url}`);
+    report += `Found ${hits} links to page: ${url}\n`;
   }
-  console.log("================");
-  console.log("END OF REPORT");
-  console.log("================");
+  report += "================\n";
+  report += "END OF REPORT\n";
+  report += "================\n";
+  return report;
 }
 
 function sortPages(pages) {
@@ -24,3 +25,34 @@ function sortPages(pages) {
 }
 
 module.exports = { sortPages, printReport };
+
+//===========
+// console log report version
+//
+// function printReport(pages) {
+//   console.log("================");
+//   console.log("REPORT");
+//   console.log("================");
+//   const sortedPages = sortPages(pages);
+//   for (const sortedPage of sortedPages) {
+//     const url = sortedPage[0];
+//     const hits = sortedPage[1];
+//     console.log(`Found ${hits} links to page: ${url}`);
+//   }
+//   console.log("================");
+//   console.log("END OF REPORT");
+//   console.log("================");
+//   return report;
+// }
+
+// function sortPages(pages) {
+//   const pagesArr = Object.entries(pages);
+//   pagesArr.sort((a, b) => {
+//     aHits = a[1];
+//     bHits = b[1];
+//     return b[1] - a[1];
+//   });
+//   return pagesArr;
+// }
+
+// module.exports = { sortPages, printReport };
